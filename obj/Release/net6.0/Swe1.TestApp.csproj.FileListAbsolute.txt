@@ -1,0 +1,15 @@
+/Users/Felix/Projects/Swe1.TestApp/Swe1.TestApp/bin/Release/net6.0/Swe1.TestApp
+/Users/Felix/Projects/Swe1.TestApp/Swe1.TestApp/bin/Release/net6.0/Swe1.TestApp.deps.json
+/Users/Felix/Projects/Swe1.TestApp/Swe1.TestApp/bin/Release/net6.0/Swe1.TestApp.runtimeconfig.json
+/Users/Felix/Projects/Swe1.TestApp/Swe1.TestApp/bin/Release/net6.0/Swe1.TestApp.dll
+/Users/Felix/Projects/Swe1.TestApp/Swe1.TestApp/bin/Release/net6.0/Swe1.TestApp.pdb
+/Users/Felix/Projects/Swe1.TestApp/Swe1.TestApp/obj/Release/net6.0/Swe1.TestApp.csproj.AssemblyReference.cache
+/Users/Felix/Projects/Swe1.TestApp/Swe1.TestApp/obj/Release/net6.0/Swe1.TestApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Felix/Projects/Swe1.TestApp/Swe1.TestApp/obj/Release/net6.0/Swe1.TestApp.AssemblyInfoInputs.cache
+/Users/Felix/Projects/Swe1.TestApp/Swe1.TestApp/obj/Release/net6.0/Swe1.TestApp.AssemblyInfo.cs
+/Users/Felix/Projects/Swe1.TestApp/Swe1.TestApp/obj/Release/net6.0/Swe1.TestApp.csproj.CoreCompileInputs.cache
+/Users/Felix/Projects/Swe1.TestApp/Swe1.TestApp/obj/Release/net6.0/Swe1.TestApp.dll
+/Users/Felix/Projects/Swe1.TestApp/Swe1.TestApp/obj/Release/net6.0/refint/Swe1.TestApp.dll
+/Users/Felix/Projects/Swe1.TestApp/Swe1.TestApp/obj/Release/net6.0/Swe1.TestApp.pdb
+/Users/Felix/Projects/Swe1.TestApp/Swe1.TestApp/obj/Release/net6.0/Swe1.TestApp.genruntimeconfig.cache
+/Users/Felix/Projects/Swe1.TestApp/Swe1.TestApp/obj/Release/net6.0/ref/Swe1.TestApp.dll

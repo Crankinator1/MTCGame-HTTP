@@ -1,19 +1,23 @@
-﻿
-namespace Swe1.TestApp
+﻿using MTCGame.DAL;
+using MTCGame.Models;
+using MTCGame.BLL;
+using System.Net;
+
+namespace MTCGame
 {
     class Program
 {
-
     static void Main(string[] args)
     {
+
         string input;
         string username;
         string password;
         string tradeinput;
         int packagesStock = 8;
         Console.WriteLine("Welcome to Monster Trading Crads!");
-        User user1 = new User("User1", 20, 100); // Coins müssen von der Datenbank ausgelesen werden
-        User user2 = new User("User2", 20, 100); // EloValues am Anfang 100 anschließend aus Datenbank auslesen
+        UserPlayer user1 = new UserPlayer("User1", 20, 100); // Coins müssen von der Datenbank ausgelesen werden
+        UserPlayer user2 = new UserPlayer("User2", 20, 100); // EloValues am Anfang 100 anschließend aus Datenbank auslesen
         ScoreBoard scoreBoard = new ScoreBoard();
         scoreBoard.AddUser(user1); //Dies müsste in eine eigene Funktion wenn ein User angelegt wird.
         scoreBoard.AddUser(user2);

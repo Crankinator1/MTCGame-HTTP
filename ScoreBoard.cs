@@ -1,4 +1,4 @@
-﻿namespace Swe1.TestApp
+﻿namespace MTCGame
 {
     public class ScoreBoard
     {
@@ -7,9 +7,9 @@
             //this.Elo_values = Elo_values;
             //this.wins = wins;
             //this.defeats = defeats;
-            Userstats = new List<User>();
+            Userstats = new List<UserPlayer>();
         }
-        public List <User> Userstats;
+        public List <UserPlayer> Userstats;
 
         public void SortScores()
         {
@@ -20,7 +20,7 @@
         {
             int count = 1;
             Console.WriteLine("---------------------------------------------");
-            foreach (User user in Userstats)
+            foreach (UserPlayer user in Userstats)
             {
                 Console.WriteLine(count + ".  Name: " + user.UserName + "    " + user.EloValue + "    Cards: " 
                                   + user.Stack.NormalStack.Count); //Was bei Gleichstand??
@@ -29,9 +29,9 @@
             Console.WriteLine("---------------------------------------------");
         }
 
-        public void AddUser(User user)
+        public void AddUser(UserPlayer userPlayer)
         {
-            Userstats.Add(user);
+            Userstats.Add(userPlayer);
         }
         // Überlegen ob user die values erhält, da username natürlich mitangegeben werden soll
         //Dann würde die Klasse wegfallen

@@ -1,15 +1,15 @@
-namespace Swe1.TestApp;
+namespace MTCGame;
 
 public class BattleGround
 {
-    public BattleGround(User user1, User user2)
+    public BattleGround(UserPlayer user1, UserPlayer user2)
     {
         Board = new LiveBoard(1);
         User1 = user1;
         User2 = user2;
     }
-    public User User1 { get; set; } // möglicherweise set am ende wegnehmen
-    public User User2 { get; set; } // möglicherweise set am ende wegnehmen
+    public UserPlayer User1 { get; set; } // möglicherweise set am ende wegnehmen
+    public UserPlayer User2 { get; set; } // möglicherweise set am ende wegnehmen
     public LiveBoard Board { get; set; }
 
     public void GreatBattle()
@@ -213,14 +213,14 @@ public class BattleGround
         battleStackLose.Remove(card);
     }
 
-    public void ResetCard(User userOne, User userTwo)
+    public void ResetCard(UserPlayer userPlayerOne, UserPlayer userPlayerTwo)
     {
-        foreach (GameCard card in userOne.Stack.BattleStack.ToList())
+        foreach (GameCard card in userPlayerOne.Stack.BattleStack.ToList())
         {
-            if (card.owner == userTwo.UserName)
+            if (card.owner == userPlayerTwo.UserName)
             {
-                userTwo.Stack.BattleStack.Add(card);
-                userOne.Stack.BattleStack.Remove(card);
+                userPlayerTwo.Stack.BattleStack.Add(card);
+                userPlayerOne.Stack.BattleStack.Remove(card);
                 
             }
         }

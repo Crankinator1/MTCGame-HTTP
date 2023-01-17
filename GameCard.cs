@@ -1,5 +1,5 @@
 ﻿
-namespace Swe1.TestApp
+namespace MTCGame
 {
     public abstract class GameCard
     {

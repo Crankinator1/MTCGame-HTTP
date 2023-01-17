@@ -1,18 +1,18 @@
-namespace Swe1.TestApp;
+namespace MTCGame;
 
 public class Store
 {
     public Store()
     {
         TradeList = new List<GameCard>();
-        Seller = new List<User>();
+        Seller = new List<UserPlayer>();
         RequirementsList = new List<GameCard>();
     }
     public List<GameCard> TradeList { get; set; }
     public List<GameCard> RequirementsList { get; set; }
-    public User ActiveSeller { get; set;}
-    public User ActiveCostumer { get; set;}
-    public List<User> Seller { get; set; }
+    public UserPlayer ActiveSeller { get; set;}
+    public UserPlayer ActiveCostumer { get; set;}
+    public List<UserPlayer> Seller { get; set; }
 
     public void Sell()
     {
@@ -93,7 +93,7 @@ public class Store
                         {
                             if (inputbuy == cardbuy.sellID)
                             {
-                                foreach (User seller in Seller)
+                                foreach (UserPlayer seller in Seller)
                                 {
                                     if (cardbuy.owner == seller.UserName)
                                     {

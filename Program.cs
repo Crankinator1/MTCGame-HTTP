@@ -1,9 +1,4 @@
-﻿using MTCGame.DAL;
-using MTCGame.Models;
-using MTCGame.BLL;
-using MTCGServerCore.Server;
-using MTCGame.API.RouteCommands;
-using System.Net;
+﻿
 
 namespace MTCGame
 { 
@@ -11,22 +6,6 @@ namespace MTCGame
     {
     static void Main(string[] args)
     {
-        var connectionString = "Host=localhost;Port=5432;Username=postgres;Password=123;Database=MTCG-DataBase";
-        var database = new Database(connectionString);
-        var userDao = database.UserDao;
-        var messageDao = database.MessageDao;
-
-        // In Memory DAOs
-        //var userDao = new InMemoryUserDao();
-        //var messageDao = new InMemoryMessageDao();
-
-        var userManager = new UserManager(userDao);
-        var messageManager = new MessageManager(messageDao);
-
-        var router = new Router(userManager, messageManager);
-        var server = new HttpServer(IPAddress.Any, 10001, router);
-        server.Start();
-
 
         string input;
         string username;

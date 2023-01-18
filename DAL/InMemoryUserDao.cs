@@ -38,5 +38,26 @@ namespace MTCGame.DAL
         {
             return _users.SingleOrDefault(u => u.Username == username);
         }
+
+        public bool InsertProfiles(User user)
+        {
+            var inserted = false;
+
+            if (GetUserByUsername(user.Username) == null)
+            {
+                //_users.Add(user);
+                inserted = false;
+            }
+
+            return inserted;
+            /*var inserted = false;
+
+            if (GetUserByUsername(user.Username) == null) //Keine Ahnung dies ist mal ein Test
+            {
+                inserted = false;
+            }
+
+            return inserted;*/
+        }
     }
 }

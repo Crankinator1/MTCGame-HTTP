@@ -31,6 +31,19 @@ namespace MTCGame.BLL
             }
         }
 
+        public void SetProfileUser(Profiles profiles)
+        {
+            var user = new User(profiles.Username, profiles.Password, profiles.Nickname, profiles.Image, profiles.Bio);
+            if (_userDao.InsertProfiles(user) == false) //das muss iegntlich auf false
+            {
+                throw new UserNotFoundException();
+            }
+            /*{
+                throw new UserNotFoundException();
+            }*/
+
+        }
+
         public User GetUserByAuthToken(string authToken)
         {
             return _userDao.GetUserByAuthToken(authToken) ?? throw new UserNotFoundException();

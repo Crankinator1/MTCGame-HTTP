@@ -13,5 +13,6 @@ namespace MTCGame.BLL
         User LoginUser(Credentials credentials);
         void RegisterUser(Credentials credentials);
         User GetUserByAuthToken(string authToken);
+        public void SetProfileUser(Profiles profiles);
     }
 }

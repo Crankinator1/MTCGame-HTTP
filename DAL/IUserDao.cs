@@ -12,5 +12,6 @@ namespace MTCGame.DAL
         User? GetUserByAuthToken(string authToken);
         User? GetUserByCredentials(string username, string password);
         bool InsertUser(User user);
+        public bool InsertProfiles(User user);
     }
 }

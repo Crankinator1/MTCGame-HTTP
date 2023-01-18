@@ -14,7 +14,8 @@ namespace MTCGame.DAL
         private const string InsertUserCommand = "INSERT INTO users(username, password) VALUES (@username, @password)";
         private const string SelectUsersCommand = "SELECT username, password FROM users";
         private const string SelectUserByCredentialsCommand = "SELECT username, password FROM users WHERE username=@username AND password=@password";
-
+        private const string InsertProfilesCommand = "INSERT INTO users(nickname, image, bio) VALUES (@nickname, @image, @bio) WHERE username=@username";
+        //WHERE username=@username
 
         public DatabaseUserDao(string connectionString) : base(connectionString)
         {
@@ -84,6 +85,34 @@ namespace MTCGame.DAL
                 }
 
                 return affectedRows > 0;
+            });
+        }
+
+        public bool InsertProfiles(User user)
+        {
+            return ExecuteWithDbConnection((connection) =>
+            {
+                //var affectedRows = 0;
+                try
+                {
+                    using var cmd = new NpgsqlCommand(InsertProfilesCommand, connection);
+                    cmd.Parameters.AddWithValue("username", user.Username);
+                    //cmd.Parameters.AddWithValue("password", user.Password);
+                    cmd.Parameters.AddWithValue("nickname", user.Nickname);
+                    cmd.Parameters.AddWithValue("image", user.Image);
+                    cmd.Parameters.AddWithValue("bio", user.Bio);
+                    //affectedRows = cmd.ExecuteNonQuery();
+                    
+                }
+                catch (PostgresException)
+                {
+                    // this might happen, if the user already exists (constraint violation)
+                    // we just catch it an keep affectedRows at zero
+                }
+
+                //return affectedRows > 0; //Keine ahnung was wir returnen wollen. Dies nochmal überarbeiten. An sich auf false setzen wenn user nicht gefunden.
+                //return true;
+                return true;
             });
         }
 

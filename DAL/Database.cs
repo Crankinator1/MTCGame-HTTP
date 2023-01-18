@@ -12,7 +12,7 @@ namespace MTCGame.DAL
         // see also https://www.postgresql.org/docs/current/ddl-constraints.html
         private const string CreateTablesCommand = @"
 CREATE TABLE IF NOT EXISTS users (username varchar PRIMARY KEY, password varchar, coins integer, token varchar, 
-wins integer, losses integer, elo integer, name varchar, bio varchar);
+wins integer, losses integer, elo integer, nickname varchar, image varchar, bio varchar);
 ";
 
         public IMessageDao MessageDao { get; private set; }
